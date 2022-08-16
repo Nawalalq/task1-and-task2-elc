@@ -87,19 +87,28 @@ void setup() {
 
 void loop() {
 
+
   byte buttonState = digitalRead(BUTTON_PIN);
+  
   
   if (buttonState != lastButtonState) {
   
+  
+  
     lastButtonState = buttonState;
+    
     
     if (buttonState == LOW) {
     
+    
       ledState = (ledState == HIGH) ? LOW: HIGH;
+      
       
       digitalWrite(LED_PIN, ledState);
       
+      
       digitalWrite(Relay_PIN, ledState);
+      
       
     }
     
